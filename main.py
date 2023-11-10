@@ -176,10 +176,10 @@ class Child(tk.Toplevel):
 
         self.button_cancel = ttk.Button(self, text='Закрыть',
                                         command=self.destroy)
-        self.button_cancel.place(x=300, y=170)
+        self.button_cancel.place(x=280, y=170)
 
         self.btn_ok = ttk.Button(self, text='Добавить')
-        self.btn_ok.place(x=220, y=170)
+        self.btn_ok.place(x=170, y=170)
         self.btn_ok.bind(
             '<Button-1>',
             lambda event: app.records(
@@ -201,7 +201,7 @@ class Update(Child):
     def init_edit(self):
         self.title('Редактировать позицию')
         btn_edit = ttk.Button(self, text='Редактировать')
-        btn_edit.place(x=180, y=170)
+        btn_edit.place(x=160, y=170)
         btn_edit.bind('<Button-1>', lambda event:
                       self.view.update_record(self.entry_name.get(),
                                               self.entry_tel.get(),
@@ -241,7 +241,7 @@ class Search(tk.Toplevel):
         btn_cancel.place(x=185, y=50)
 
         btn_search = ttk.Button(self, text='Поиск')
-        btn_search.place(x=105, y=50)
+        btn_search.place(x=80, y=50)
         btn_search.bind('<Button-1>', lambda event:
                         self.view.search_records(self.entry_search.get()))
         btn_search.bind('<Button-1>', lambda event: self.destroy(), add='+')
